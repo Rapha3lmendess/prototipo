@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+
+    <!-- Responsividade -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Yokai Tails - Cadastro</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Caixa do cadastro -->
+    <div class="caixa-login">
+
+        <h1 class="titulo-jogo">Yokai Tails</h1>
+
+        <p class="texto-login">
+            Crie sua conta
+        </p>
+
+        <!-- Formulário de cadastro -->
+        <form id="formCadastro">
+
+            <label for="novoUsuario">Usuário</label>
+
+            <input
+                type="text"
+                id="novoUsuario"
+                class="campo"
+                placeholder="Escolha um usuário"
+                required
+            >
+
+            <label for="novoEmail">E-mail</label>
+
+            <input
+                type="email"
+                id="novoEmail"
+                class="campo"
+                placeholder="Digite seu e-mail"
+                required
+            >
+
+            <label for="novaSenha">Senha</label>
+
+            <input
+                type="password"
+                id="novaSenha"
+                class="campo"
+                placeholder="Crie uma senha"
+                required
+            >
+
+            <label for="confirmaSenha">Confirmar senha</label>
+
+            <input
+                type="password"
+                id="confirmaSenha"
+                class="campo"
+                placeholder="Digite a senha novamente"
+                required
+            >
+
+            <button type="submit" class="botao-login">
+                CRIAR CONTA
+            </button>
+
+        </form>
+
+        <!-- Mensagem de erro ou sucesso -->
+        <p id="mensagemCadastro" class="mensagem"></p>
+
+        <p class="texto-baixo">
+            Já possui uma conta?
+            <a href="login.html">Fazer login</a>
+        </p>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

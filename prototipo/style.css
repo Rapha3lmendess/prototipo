@@ -1,0 +1,944 @@
+/*
+====================================================
+        YOKAI TAILS - ARQUIVO CSS
+
+    Este arquivo é responsável pela aparência
+====================================================
+*/
+/*
+    O * seleciona todos os elementos da página.
+
+    Aqui retiramos as margens e espaçamentos que
+    o navegador coloca automaticamente.
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+
+    /*
+        Faz com que padding e border não aumentem
+        o tamanho total dos elementos.
+    */
+
+    box-sizing: border-box;
+}
+
+
+/*
+    Variáveis de cores.
+
+    Usei variáveis para facilitar a alteração
+    das cores do site.
+*/
+
+:root {
+
+    /* Laranja principal */
+    --laranja: #ff7a18;
+
+    /* Laranja mais claro */
+    --laranja-claro: #ffb15c;
+
+    /* Laranja usado para efeitos */
+    --laranja-hover: #ff963d;
+
+    /* Fundo escuro */
+    --fundo: #120b07;
+
+    /* Fundo das caixas */
+    --fundo-caixa: #24150c;
+
+    /* Fundo dos campos */
+    --fundo-campo: #140c07;
+
+    /* Cor das bordas */
+    --borda: #4a2b18;
+
+    /* Cor principal dos textos */
+    --texto: #f5e5d5;
+
+    /* Cor dos textos menos importantes */
+    --texto-fraco: #b8a294;
+
+    /* Cor para mensagens de erro */
+    --vermelho: #ff5c5c;
+
+    /* Cor para mensagens de sucesso */
+    --verde: #72e6a5;
+}
+
+
+/*
+    Configuração geral do corpo da página.
+*/
+
+body {
+
+    /*
+        Fonte simples e fácil de entender.
+    */
+
+    font-family: Arial, sans-serif;
+
+    /*
+        Fundo principal.
+    */
+
+    background-color: var(--fundo);
+
+    color: white;
+
+    min-height: 100vh;
+}
+
+
+/* ==================================================
+   PÁGINA DE LOGIN E CADASTRO
+================================================== */
+
+
+/*
+    Caixa que contém o formulário.
+
+    Essa mesma classe é utilizada na página
+    de login e na página de cadastro.
+*/
+
+.caixa-login {
+
+    width: 380px;
+
+    /*
+        Faz a caixa não ultrapassar a tela
+        em celulares.
+    */
+
+    max-width: 90%;
+
+    /*
+        Cor do fundo da caixa.
+    */
+
+    background-color: var(--fundo-caixa);
+
+    /*
+        Espaçamento interno.
+    */
+
+    padding: 40px;
+
+    /*
+        Cantos arredondados.
+    */
+
+    border-radius: 15px;
+
+    /*
+        Borda da caixa.
+    */
+
+    border: 1px solid var(--borda);
+
+    /*
+        Sombra laranja ao redor da caixa.
+    */
+
+    box-shadow:
+        0 0 25px rgba(255, 122, 24, 0.25);
+
+    /*
+        Centraliza a caixa horizontalmente.
+    */
+
+    margin: 80px auto;
+}
+
+
+/* ==================================================
+   TÍTULO DO JOGO
+================================================== */
+
+
+/*
+    Nome "Yokai Tails".
+*/
+
+.titulo-jogo {
+
+    color: var(--laranja-claro);
+
+    text-align: center;
+
+    font-size: 38px;
+
+    margin-bottom: 10px;
+
+    /*
+        Pequeno brilho laranja no título.
+    */
+
+    text-shadow:
+        0 0 15px rgba(255, 122, 24, 0.3);
+}
+
+
+/*
+    Texto que aparece abaixo do título.
+*/
+
+.texto-login {
+
+    text-align: center;
+
+    color: var(--texto-fraco);
+
+    margin-bottom: 30px;
+}
+
+
+/* ==================================================
+   LABELS
+================================================== */
+
+
+/*
+    Texto que identifica cada campo.
+*/
+
+label {
+
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: var(--texto);
+
+    font-size: 14px;
+}
+
+
+/* ==================================================
+   CAMPOS DE TEXTO
+================================================== */
+
+
+/*
+    Estilo dos campos de usuário,
+    e-mail, senha e confirmação de senha.
+*/
+
+.campo {
+
+    width: 100%;
+
+    padding: 13px;
+
+    margin-bottom: 20px;
+
+    /*
+        Borda dos campos.
+    */
+
+    border: 2px solid var(--borda);
+
+    border-radius: 8px;
+
+    /*
+        Fundo dos campos.
+    */
+
+    background-color: var(--fundo-campo);
+
+    /*
+        Cor do texto digitado.
+    */
+
+    color: white;
+
+    font-size: 14px;
+
+    /*
+        Retira a borda padrão que aparece
+        quando o campo é selecionado.
+    */
+
+    outline: none;
+
+    /*
+        Faz a mudança de cor ficar suave.
+    */
+
+    transition: 0.2s;
+}
+
+
+/*
+    Quando o usuário clica no campo,
+    a borda fica laranja.
+*/
+
+.campo:focus {
+
+    border-color: var(--laranja);
+
+    /*
+        Cria um brilho ao redor do campo.
+    */
+
+    box-shadow:
+        0 0 8px rgba(255, 122, 24, 0.2);
+}
+
+
+/*
+    Cor do texto de exemplo dos campos.
+*/
+
+.campo::placeholder {
+
+    color: #77685e;
+}
+
+
+/* ==================================================
+   BOTÃO DE LOGIN / CADASTRO
+================================================== */
+
+
+/*
+    Botão utilizado para entrar e criar conta.
+*/
+
+.botao-login {
+
+    width: 100%;
+
+    padding: 14px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    /*
+        Laranja principal.
+    */
+
+    background-color: var(--laranja);
+
+    color: white;
+
+    font-size: 15px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    /*
+        Animação do botão.
+    */
+
+    transition: 0.2s;
+}
+
+
+/*
+    Quando o mouse passa pelo botão.
+*/
+
+.botao-login:hover {
+
+    background-color: var(--laranja-hover);
+
+    /*
+        O botão aumenta levemente.
+    */
+
+    transform: scale(1.02);
+
+    /*
+        Brilho laranja.
+    */
+
+    box-shadow:
+        0 5px 20px rgba(255, 122, 24, 0.3);
+}
+
+
+/*
+    Quando o botão é pressionado.
+*/
+
+.botao-login:active {
+
+    transform: scale(0.98);
+}
+
+
+/* ==================================================
+   MENSAGENS
+================================================== */
+
+
+/*
+    Essa classe é utilizada pelo JavaScript
+    para mostrar mensagens de sucesso ou erro.
+*/
+
+.mensagem {
+
+    text-align: center;
+
+    /*
+        Mantém um pequeno espaço mesmo
+        quando não existe mensagem.
+    */
+
+    min-height: 20px;
+
+    margin-top: 18px;
+
+    font-size: 13px;
+
+    font-weight: bold;
+}
+
+
+/* ==================================================
+   TEXTO INFERIOR
+================================================== */
+
+
+/*
+    Texto que aparece abaixo do formulário.
+*/
+
+.texto-baixo {
+
+    text-align: center;
+
+    color: var(--texto-fraco);
+
+    margin-top: 25px;
+
+    font-size: 13px;
+}
+
+
+/*
+    Todos os links do site.
+*/
+
+a {
+
+    color: var(--laranja-claro);
+
+    text-decoration: none;
+
+    transition: 0.2s;
+}
+
+
+/*
+    Quando passa o mouse sobre um link.
+*/
+
+a:hover {
+
+    color: var(--laranja-hover);
+
+    text-decoration: underline;
+}
+
+
+/* ==================================================
+   PÁGINA DE DOWNLOAD
+================================================== */
+
+
+/*
+    Container principal da página de download.
+*/
+
+.pagina-download {
+
+    min-height: 100vh;
+
+    /*
+        Faz o rodapé ficar na parte inferior.
+    */
+
+    display: flex;
+
+    flex-direction: column;
+}
+
+
+/* ==================================================
+   CABEÇALHO
+================================================== */
+
+
+/*
+    Parte superior da página.
+*/
+
+.cabecalho {
+
+    height: 80px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 0 8%;
+
+    background-color: var(--fundo-caixa);
+
+    border-bottom: 1px solid var(--borda);
+}
+
+
+/*
+    Título dentro do cabeçalho.
+
+    Ele fica menor porque existe pouco espaço.
+*/
+
+.cabecalho .titulo-jogo {
+
+    font-size: 28px;
+
+    margin: 0;
+}
+
+
+/*
+    Links do menu.
+*/
+
+.cabecalho nav a {
+
+    margin-left: 25px;
+
+    color: var(--texto);
+
+    font-size: 14px;
+}
+
+
+/*
+    Quando o mouse passa nos links.
+*/
+
+.cabecalho nav a:hover {
+
+    color: var(--laranja-claro);
+
+    text-decoration: none;
+}
+
+
+/* ==================================================
+   CONTEÚDO DA PÁGINA DE DOWNLOAD
+================================================== */
+
+
+/*
+    Área que contém a capa do jogo
+    e as informações.
+*/
+
+.conteudo-download {
+
+    /*
+        Ocupa o espaço disponível.
+    */
+
+    flex: 1;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    /*
+        Espaço entre os dois elementos.
+    */
+
+    gap: 70px;
+
+    padding: 60px 8%;
+}
+
+
+/* ==================================================
+   CAPA DO JOGO
+================================================== */
+
+
+/*
+    Essa div representa a capa do jogo.
+
+    Como estamos fazendo o projeto somente com
+    HTML e CSS, usamos um gradiente para criar
+    uma arte simples.
+*/
+
+.imagem-jogo {
+
+    width: 320px;
+
+    height: 420px;
+
+    border-radius: 18px;
+
+    /*
+        Gradiente em tons de laranja.
+    */
+
+    background:
+        linear-gradient(
+            145deg,
+            #ff7a18,
+            #9b3d08,
+            #241006
+        );
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    /*
+        Brilho laranja.
+    */
+
+    box-shadow:
+        0 0 35px rgba(255, 122, 24, 0.35);
+
+    /*
+        Borda para destacar a capa.
+    */
+
+    border: 1px solid #a84e12;
+}
+
+
+/*
+    Texto dentro da capa.
+*/
+
+.imagem-jogo span {
+
+    text-align: center;
+
+    font-size: 40px;
+
+    font-weight: bold;
+
+    color: white;
+
+    /*
+        Sombra no texto para melhorar
+        a leitura.
+    */
+
+    text-shadow:
+        2px 2px 5px #301204;
+}
+
+
+/* ==================================================
+   INFORMAÇÕES DO JOGO
+================================================== */
+
+
+/*
+    Área onde ficam título,
+    descrição e botão.
+*/
+
+.informacoes-jogo {
+
+    max-width: 500px;
+}
+
+
+/*
+    Título "Baixe Yokai Tails".
+*/
+
+.informacoes-jogo h2 {
+
+    font-size: 40px;
+
+    color: var(--laranja-claro);
+
+    margin-bottom: 20px;
+
+    text-shadow:
+        0 0 15px rgba(255, 122, 24, 0.2);
+}
+
+
+/*
+    Descrição do jogo.
+*/
+
+.informacoes-jogo p {
+
+    color: var(--texto);
+
+    line-height: 1.7;
+
+    margin-bottom: 15px;
+}
+
+
+/*
+    Texto da versão.
+*/
+
+.versao {
+
+    color: var(--texto-fraco) !important;
+
+    font-size: 13px;
+}
+
+
+/* ==================================================
+   BOTÃO DE DOWNLOAD
+================================================== */
+
+
+/*
+    Botão responsável pelo download.
+*/
+
+.botao-download {
+
+    display: inline-block;
+
+    margin-top: 20px;
+
+    padding: 15px 30px;
+
+    border-radius: 8px;
+
+    background-color: var(--laranja);
+
+    color: white;
+
+    font-weight: bold;
+
+    /*
+        Retiramos o sublinhado.
+    */
+
+    text-decoration: none;
+
+    transition: 0.2s;
+}
+
+
+/*
+    Efeito ao passar o mouse.
+*/
+
+.botao-download:hover {
+
+    background-color: var(--laranja-hover);
+
+    text-decoration: none;
+
+    /*
+        Pequeno movimento para cima.
+    */
+
+    transform: translateY(-2px);
+
+    /*
+        Brilho laranja.
+    */
+
+    box-shadow:
+        0 8px 20px rgba(255, 122, 24, 0.3);
+}
+
+
+/* ==================================================
+   RODAPÉ
+================================================== */
+
+
+/*
+    Rodapé da página de download.
+*/
+
+.rodape {
+
+    text-align: center;
+
+    padding: 20px;
+
+    background-color: #0b0704;
+
+    color: #85766b;
+
+    border-top: 1px solid var(--borda);
+
+    font-size: 12px;
+}
+
+
+/* ==================================================
+   RESPONSIVIDADE
+================================================== */
+
+
+/*
+    Essas regras são aplicadas quando a tela
+    possui no máximo 700 pixels de largura.
+
+    Isso ajuda o site a funcionar em celulares.
+*/
+
+@media (max-width: 700px) {
+
+
+    /*
+        Diminui o espaço lateral do cabeçalho.
+    */
+
+    .cabecalho {
+
+        padding: 0 5%;
+    }
+
+
+    /*
+        Faz os elementos da página de download
+        ficarem um embaixo do outro.
+    */
+
+    .conteudo-download {
+
+        flex-direction: column;
+
+        gap: 40px;
+
+        padding: 40px 5%;
+    }
+
+
+    /*
+        Diminui a imagem/capa do jogo.
+    */
+
+    .imagem-jogo {
+
+        width: 250px;
+
+        height: 330px;
+    }
+
+
+    /*
+        Centraliza as informações no celular.
+    */
+
+    .informacoes-jogo {
+
+        text-align: center;
+    }
+
+
+    /*
+        Diminui o tamanho do título.
+    */
+
+    .informacoes-jogo h2 {
+
+        font-size: 30px;
+    }
+
+
+    /*
+        Diminui o título do cabeçalho.
+    */
+
+    .cabecalho .titulo-jogo {
+
+        font-size: 22px;
+    }
+
+
+    /*
+        Diminui o espaço entre os links.
+    */
+
+    .cabecalho nav a {
+
+        margin-left: 10px;
+    }
+
+}
+
+
+/*
+    Ajustes para celulares ainda menores.
+*/
+
+@media (max-width: 450px) {
+
+
+    /*
+        A caixa de login fica um pouco menor.
+    */
+
+    .caixa-login {
+
+        padding: 30px 20px;
+
+        margin: 40px auto;
+    }
+
+
+    /*
+        Diminui o título.
+    */
+
+    .titulo-jogo {
+
+        font-size: 32px;
+    }
+
+
+    /*
+        A capa fica menor.
+    */
+
+    .imagem-jogo {
+
+        width: 220px;
+
+        height: 290px;
+    }
+
+
+    /*
+        Diminui o texto da capa.
+    */
+
+    .imagem-jogo span {
+
+        font-size: 30px;
+    }
+
+}

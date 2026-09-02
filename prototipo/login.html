@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+
+    <!-- Faz a página se adaptar ao celular -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Yokai Tails - Login</title>
+
+    <!-- Arquivo que contém o visual da página -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Caixa principal do login -->
+    <div class="caixa-login">
+
+        <h1 class="titulo-jogo">Yokai Tails</h1>
+
+        <p class="texto-login">
+            Entre na sua conta
+        </p>
+
+        <!--
+            Formulário de login.
+            O JavaScript vai verificar os dados digitados.
+        -->
+        <form id="formLogin">
+
+            <label for="usuario">Usuário</label>
+
+            <input
+                type="text"
+                id="usuario"
+                class="campo"
+                placeholder="Digite seu usuário"
+                required
+            >
+
+            <label for="senha">Senha</label>
+
+            <input
+                type="password"
+                id="senha"
+                class="campo"
+                placeholder="Digite sua senha"
+                required
+            >
+
+            <button type="submit" class="botao-login">
+                ENTRAR
+            </button>
+
+        </form>
+
+        <!--
+            Aqui o JavaScript vai mostrar mensagens,
+            como "Login realizado" ou "Senha incorreta".
+        -->
+        <p id="mensagemLogin" class="mensagem"></p>
+
+        <p class="texto-baixo">
+            Ainda não possui uma conta?
+            <a href="cadastro.html">Cadastre-se</a>
+        </p>
+
+    </div>
+
+    <!-- Arquivo JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+
+</html>
